@@ -2,7 +2,7 @@
 
 Best YouTube Video or Audio Downloader in TeleGram By @TeamTeleRoid........ 
 
-# TeleRoid YouTube Bot ❤
+# PHubBot 🤣
 
 > This bot can download video or audio from youtube quickly (custom thumbnail support) Can be found in telegram as [@TeleRoidYoutubeBot](https://t.me/TeleRoid_YouTube_Bot)
 
@@ -13,11 +13,7 @@ Best YouTube Video or Audio Downloader in TeleGram By @TeamTeleRoid........
 ### Credits:
 
 - [Dashezup](https://github.com/dashezup) 'Author of base repo'
-
-- [TeleRoid BOTs](https://t.me/TeleRoidGroup)
-
 - [Pyrogram Library](https://github.com/pyrogram/pyrogram)
 
 ### Developers:
-
 - [@PredatorHackerzZ](https://t.me/PredatorHackerzZ_bot)
