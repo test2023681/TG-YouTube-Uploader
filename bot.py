@@ -34,14 +34,16 @@ I can download video or audio from Youtube. Made by @TheTeleRoid 🇮🇳
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
-                                [[
-                                        InlineKeyboardButton(
-                                            "⭕ Channel ⭕", url="https://t.me/TeleRoidGroup"),
-                                        InlineKeyboardButton(
-                                            "🛑 Support 🛑", url="https://t.me/TeleRoid14")
+                                [
+                                [
+                                        InlineKeyboardButton('🗣️ Help', callback_data="help"),
+                                        InlineKeyboardButton('👥 Support', url='https://telegram.me/TeleRoid14')
                                     ],[
-                                      InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/P-Phreak/TG-YouTube-Uploader")
+                                        InlineKeyboardButton('👮 Owner', url='https://t.me/ThTeleRoid'),
+                                        InlineKeyboardButton('🤖 Bot List', url='https://t.me/joinchat/t1ko_FOJxhFiOThl'),
+                                        InlineKeyboardButton('Channel 📢', url='https://t.me/TeleRoidGroup')
+                                    ],[
+                                        InlineKeyboardButton('⭕Source Code -GitHub⭕', url='https://github.com/PredatorHackerzZ/TG-YouTube-Uploader'),
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -60,12 +62,15 @@ Just send a Youtube url to download it in video or audio format!
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "⭕ Channel ⭕", url="https://t.me/TeleRoidGroup"),
+                                            "🔙 Back", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "🛑 Support 🛑", url="https://t.me/TeleRoid14"),
+                                            "About 🙄", callback_data="about"),
                                   ],[
-                                        InlineKeyboardButton(
-                                            "About Meh👤", url="https://t.me/TheTeleRoid")
+                                        InlineKeyboardButton("👮 Owner", url="https://t.me/TheTeleRoid"),
+                                        InlineKeyboardButton("🤖 Bot List", url="https://t.me/joinchat/t1ko_FOJxhFiOThl"),
+                                        InlineKeyboardButton('Channel 📢', url="https://t.me/TeleRoidGroup")
+                                    ],[
+                                        InlineKeyboardButton("⭕Source Code -GitHub⭕", url="https://github.com/PredatorHackerzZ/TG-YouTube-Uploader"),
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -88,7 +93,7 @@ async def about(client, message):
 
 <b>🤖 BotList :</b> <a href="https://t.me/TGRobot_List"> Telegram Bots </a>
 
-<b>📌 Source : </b> <a href="https://GitHub.com/P-Phreak/TG-YouTube-Uploader"> Click Here </a>
+<b>👤 Source : </b> <a href="https://GitHub.com/PredatorHackerzZ/TG-YouTube-Uploader"> Click Here </a>
 
 <b>~ @TeleRoidGroup</b>""",
      reply_markup=InlineKeyboardMarkup(
