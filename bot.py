@@ -109,18 +109,50 @@ async def about(client, message):
 
 # https://docs.pyrogram.org/start/examples/bot_keyboards
 # Reply with inline keyboard
-@bot.on_message(filters.private
+@ZauteKm.on_message(filters.private
                    & filters.text
                    & ~filters.edited
                    & filters.regex(YTDL_REGEX))
-async def ytdl_with_button(_, message: Message):
+async def ytdl_with_button(c: Client, message: Message):
+    if Config.UPDATES_CHANNEL is not None:
+        try:
+            user = await c.get_chat_member(Config.UPDATES_CHANNEL, message.chat.id)
+            if user.status == "kicked":
+                await c.send_message(
+                    chat_id=message.chat.id,
+                    text="Sorry, You are Banned to use me. Contact my [master](https://t.me/ZauteBot).",
+                    parse_mode="markdown",
+                    disable_web_page_preview=True
+                )
+                return
+        except UserNotParticipant:
+            await c.send_message(
+                chat_id=message.chat.id,
+                text="**Please Join My Updates Channel to use me 😉**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("Join Updates Channel", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
+                        ]
+                    ]
+                ),
+                parse_mode="markdown"
+            )
+            return
+        except Exception:
+            await c.send_message(
+                chat_id=message.chat.id,
+                text="Something went Wrong. Contact my [Support Group](https://t.me/TeleRoid14).",
+                parse_mode="markdown",
+                disable_web_page_preview=True)
+            return
     await message.reply_text(
-        "**Choose download type👇**",
+        "**Choose Download type👇**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Audio 🎵",
+                        "🎵 Audio",
                         callback_data="ytdl_audio"
                     ),
                     InlineKeyboardButton(
@@ -132,7 +164,6 @@ async def ytdl_with_button(_, message: Message):
         ),
         quote=True
     )
-
 
 @bot.on_callback_query(filters.regex("^ytdl_audio$"))
 async def callback_query_ytdl_audio(_, callback_query):
