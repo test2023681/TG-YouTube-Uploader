@@ -36,14 +36,14 @@ Hit help button to find out more about how to use me</b>""",
                             reply_markup=InlineKeyboardMarkup(
                                 [
                                 [
-                                        InlineKeyboardButton('🗣️ Help', callback_data="help"),
+                                        InlineKeyboardButton('🆘 Help', callback_data="help"),
                                         InlineKeyboardButton('👥 Support', url='https://telegram.me/TeleRoid14')
                                     ],[
                                         InlineKeyboardButton('👮 Owner', url='https://t.me/ThTeleRoid'),
-                                        InlineKeyboardButton('🤖 Bot List', url='https://t.me/joinchat/t1ko_FOJxhFiOThl'),
+                                        InlineKeyboardButton('🤖 BotsList', url='https://t.me/joinchat/t1ko_FOJxhFiOThl'),
                                         InlineKeyboardButton('Channel 📢', url='https://t.me/TeleRoidGroup')
                                     ],[
-                                        InlineKeyboardButton('⭕Source Code -GitHub⭕', url='https://github.com/PredatorHackerzZ/TG-YouTube-Uploader'),
+                                        InlineKeyboardButton('⭕ Source-GitHub ⭕', url='https://github.com/PredatorHackerzZ/TG-YouTube-Uploader'),
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -64,7 +64,7 @@ Just send a Youtube url to download it in video or audio format!
                                         InlineKeyboardButton(
                                             "🔙 Back", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "About 🙄", callback_data="about"),
+                                            "👥 About ", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton("👮 Owner", url="https://t.me/TheTeleRoid"),
                                         InlineKeyboardButton("🤖 Bot List", url="https://t.me/joinchat/t1ko_FOJxhFiOThl"),
