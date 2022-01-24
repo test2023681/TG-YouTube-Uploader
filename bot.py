@@ -113,13 +113,14 @@ async def about(client, message):
                    & filters.text
                    & ~filters.edited
                    & filters.regex(YTDL_REGEX))
+async def ytdl_with_button(_, message: Message):
     await message.reply_text(
         "**Choose Download type👇**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🎵 Audio",
+                        "Audio 🎵",
                         callback_data="ytdl_audio"
                     ),
                     InlineKeyboardButton(
